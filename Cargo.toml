@@ -12,7 +12,7 @@ keywords = ["gltf loader"]
 wgpu = "0.13"
 bytemuck = "1.12"
 pi_atom = { version="0.2", features = ["serde"] }
-pi_gltf = { path = "../pi_gltf" }
+pi_gltf = { git = "https://github.com/GaiaWorld/pi_gltf.git" }
 pi_hal = { git = "https://github.com/GaiaWorld/pi_hal.git" }
 serde_cbor = "0.11.2"
 base64 = "0.20.0"
