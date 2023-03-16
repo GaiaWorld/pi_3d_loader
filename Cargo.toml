@@ -12,7 +12,37 @@ keywords = ["gltf loader"]
 wgpu = "0.13"
 bytemuck = "1.12"
 pi_atom = { version="0.2", features = ["serde"] }
-pi_gltf = { git = "https://github.com/GaiaWorld/pi_gltf.git" }
-pi_hal = { git = "https://github.com/GaiaWorld/pi_hal.git" }
 serde_cbor = "0.11.2"
 base64 = "0.20.0"
+nalgebra = "0.30"
+
+pi_ecs = { git = "https://github.com/GaiaWorld/pi_ecs.git" }
+pi_animation = { git = "https://github.com/GaiaWorld/pi_animation.git" }
+pi_scene_math = { git = "https://github.com/GaiaWorld/pi_scene" }
+pi_curves = { git = "https://github.com/GaiaWorld/pi_curves" }
+pi_gltf = { git = "https://github.com/GaiaWorld/pi_gltf.git" }
+pi_hal = { git = "https://github.com/GaiaWorld/pi_hal.git" }
+
+pi_render = { git = "https://github.com/GaiaWorld/pi_render", branch = "master-shader"}
+
+
+pi_scene_context = { path = "../pi_3d/crates/pi_scene_context" }
+pi_mesh_builder = { path = "../pi_3d/crates/pi_mesh_builder" }
+default_render = { path = "../pi_3d/crates/default_render" }
+unlit_material = { path = "../pi_3d/crates/unlit_material" }
+pi_engine_shell = { path = "../pi_3d/crates/pi_engine_shell" }
+
+[patch."https://github.com/GaiaWorld/pi_render"]
+pi_render = { path = "../pi_render" }
+
+[patch."https://github.com/GaiaWorld/pi_ecs"]
+pi_ecs = { path = "../pi_ecs" }
+
+[patch."https://github.com/GaiaWorld/pi_hal"]
+pi_hal = { path = "../pi_hal" }
+
+[patch."http://ser.yinengyun.com:10082/tech/winit.git"]
+winit = { path = "../winit" }
+
+[patch."https://github.com/GaiaWorld/pi_scene"]
+pi_scene_math = { path = "../pi_scene/crates/pi_scene_math" }

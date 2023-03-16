@@ -1,16 +1,12 @@
-use std::{
-    path::PathBuf,
-    str::FromStr,
-    sync::atomic::{AtomicU64, AtomicUsize, Ordering},
-};
+use std::{path::PathBuf, str::FromStr};
 
-use gltf::{Document, Gltf};
-use pi_atom::Atom;
+use gltf::Gltf;
+
 use pi_gltf as gltf;
 
 pub struct GltfTest {
     gltf: Gltf,
-    path: PathBuf,
+    _path: PathBuf,
     buffer_data: Vec<(String, Vec<u8>)>,
 }
 
@@ -137,7 +133,7 @@ pub fn from_gltf(path: &str) -> Result<GltfTest, String> {
             }
             return Ok(GltfTest {
                 gltf,
-                path,
+                _path: path,
                 buffer_data,
             });
         }
