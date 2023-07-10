@@ -9,18 +9,18 @@ license = "MIT OR Apache-2.0"
 keywords = ["gltf loader"]
 
 [dependencies]
-wgpu = "0.13"
 bytemuck = "1.12"
 pi_atom = { version="0.2", features = ["serde"] }
 serde_cbor = "0.11.2"
 base64 = "0.20.0"
-nalgebra = "0.30"
+nalgebra = "0.32"
+bevy                = { version="0.10", default-features = false, features=["bevy_winit"] }
 
 pi_ecs = { git = "https://github.com/GaiaWorld/pi_ecs.git" }
 pi_animation = { git = "https://github.com/GaiaWorld/pi_animation.git" }
 pi_scene_math = { git = "https://github.com/GaiaWorld/pi_scene" }
 pi_curves = { git = "https://github.com/GaiaWorld/pi_curves" }
-pi_gltf = { git = "https://github.com/GaiaWorld/pi_gltf.git" }
+pi_gltf = { git = "https://github.com/GaiaWorld/pi_gltf.git", features = ["extras"]}
 pi_hal = { git = "https://github.com/GaiaWorld/pi_hal.git" }
 
 pi_render = { git = "https://github.com/GaiaWorld/pi_render", branch = "master-shader"}
@@ -31,6 +31,8 @@ pi_mesh_builder = { path = "../pi_3d/crates/pi_mesh_builder" }
 default_render = { path = "../pi_3d/crates/default_render" }
 unlit_material = { path = "../pi_3d/crates/unlit_material" }
 pi_engine_shell = { path = "../pi_3d/crates/pi_engine_shell" }
+pi_node_materials = { path = "../pi_3d/crates/node_materials" }
+particle = { path = "../pi_3d/crates/particle" }
 
 [patch."https://github.com/GaiaWorld/pi_render"]
 pi_render = { path = "../pi_render" }
