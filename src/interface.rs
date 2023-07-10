@@ -14,7 +14,7 @@ use particle::{
         EMeshParticleScaleMode, EMeshParticleSpaceMode, ERenderAlignment, ERenderMode,
     },
 };
-use pi_animation::animation::AnimationInfo;
+use pi_animation::{animation::AnimationInfo, animation_group::AnimationGroupID};
 use pi_atom::Atom;
 use pi_curves::curve::frame_curve::FrameCurve;
 
@@ -99,9 +99,9 @@ impl<'a, 'b> GLTFAPI<'a, 'b> {
             self.commands
                 .transformcmds
                 .localpos
-                .push(OpsTransformNodeLocalPosition(
+                .push(OpsTransformNodeLocalPosition::ops(
                     entity,
-                    Vector3::new(pos[0], pos[1], pos[2]),
+                    pos[0], pos[1], pos[2],
                 ));
         }
 
@@ -109,9 +109,9 @@ impl<'a, 'b> GLTFAPI<'a, 'b> {
             self.commands
                 .transformcmds
                 .localscl
-                .push(OpsTransformNodeLocalScaling(
+                .push(OpsTransformNodeLocalScaling::ops(
                     entity,
-                    Vector3::new(scaling[0], scaling[1], scaling[2]),
+                    scaling[0], scaling[1], scaling[2],
                 ));
         }
 
@@ -119,28 +119,24 @@ impl<'a, 'b> GLTFAPI<'a, 'b> {
             self.commands
                 .transformcmds
                 .localrot
-                .push(OpsTransformNodeLocalEuler(
+                .push(OpsTransformNodeLocalEuler::ops(
                     entity,
-                    Vector3::new(rotation[0], rotation[1], rotation[2]),
+                    rotation[0], rotation[1], rotation[2],
                 ));
         }
 
         if let Some(rotation) = rotation_quaterion {
             // TODO: need to check
 
-            let euler_angles = Quaternion::from_quaternion(nalgebra::Quaternion::new(
-                rotation[3],
-                rotation[0],
-                rotation[1],
-                rotation[2],
-            ))
-            .euler_angles();
             self.commands
                 .transformcmds
-                .localrot
-                .push(OpsTransformNodeLocalEuler(
+                .localrotq
+                .push(OpsTransformNodeLocalRotationQuaternion::ops(
                     entity,
-                    Vector3::new(euler_angles.0, euler_angles.1, euler_angles.2),
+                    rotation[0],
+                    rotation[1],
+                    rotation[2],
+                    rotation[3],
                 ));
         }
 
@@ -162,26 +158,26 @@ impl<'a, 'b> GLTFAPI<'a, 'b> {
             self.commands
                 .transformcmds
                 .localpos
-                .push(OpsTransformNodeLocalPosition(
+                .push(OpsTransformNodeLocalPosition::ops(
                     entity,
-                    Vector3::new(postion[0], postion[1], postion[2]),
+                    postion[0], postion[1], postion[2],
                 ));
 
             self.commands
                 .transformcmds
                 .localscl
-                .push(OpsTransformNodeLocalScaling(
+                .push(OpsTransformNodeLocalScaling::ops(
                     entity,
-                    Vector3::new(scaling[0], scaling[1], scaling[2]),
+                    scaling[0], scaling[1], scaling[2],
                 ));
 
             let euler_angles = rotation.euler_angles();
             self.commands
                 .transformcmds
                 .localrot
-                .push(OpsTransformNodeLocalEuler(
+                .push(OpsTransformNodeLocalEuler::ops(
                     entity,
-                    Vector3::new(euler_angles.0, euler_angles.1, euler_angles.2),
+                    euler_angles.0, euler_angles.1, euler_angles.2,
                 ));
         }
     }
@@ -368,7 +364,7 @@ impl<'a, 'b> GLTFAPI<'a, 'b> {
         None
     }
 
-    pub fn gltf_create_animation_group(&mut self, id_obj: ObjectID, key_animegroup: &Atom) {
+    pub fn gltf_create_animation_group(&mut self, id_obj: ObjectID, key_animegroup: &Atom) -> AnimationGroupID {
         // let _ = self.create_animation_group(id_obj, key_animegroup);
         let id_group = self
             .commands
@@ -376,23 +372,18 @@ impl<'a, 'b> GLTFAPI<'a, 'b> {
             .scene_ctxs
             .create_group(self.scene_id)
             .unwrap();
-        self.commands
-            .animegroupcmd
-            .create
-            .push(OpsAnimationGroupCreation::ops(
-                id_obj,
-                key_animegroup.clone(),
-                id_group,
-            ));
+        self.commands.animegroupcmd.global.record_group(id_obj, id_group);
         // todo!()
+
+        id_group
     }
 
     pub fn gltf_create_target_animation(
         &mut self,
         asset_curve: AssetFrameCurveType,
-        id_obj: ObjectID,
+        id_scene: ObjectID,
         id_target: ObjectID,
-        key_animegroup: &Atom,
+        key_animegroup: AnimationGroupID,
     ) {
         let animation: AnimationInfo = match asset_curve {
             AssetFrameCurveType::Scaling(curve) => self
@@ -415,25 +406,10 @@ impl<'a, 'b> GLTFAPI<'a, 'b> {
                 .create_animation(0, curve),
         };
 
-        self.commands
-            .animegroupcmd
-            .add_target_anime
-            .push(OpsAddTargetAnimation::ops(
-                id_obj,
-                id_target,
-                key_animegroup.clone(),
-                animation,
-            ));
+        self.commands.animegroupcmd.scene_ctxs.add_target_anime(id_scene, id_target, key_animegroup, animation);
     }
 
-    pub fn gltf_start_animation_group(&mut self, id_obj: ObjectID, key_animegroup: &Atom) {
-        self.commands
-            .animegroupcmd
-            .start
-            .push(OpsAnimationGroupStart::ops(
-                id_obj,
-                key_animegroup.clone(),
-                AnimationGroupParam::default(),
-            ));
+    pub fn gltf_start_animation_group(&mut self, id_scene: ObjectID, group: AnimationGroupID) {
+        self.commands.animegroupcmd.scene_ctxs.start_with_progress(id_scene, group, AnimationGroupParam::default());
     }
 }

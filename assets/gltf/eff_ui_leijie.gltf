@@ -1,0 +1,2339 @@
+{
+    "accessors": [
+        {
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 185,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 185,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 864,
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 0,
+            "byteOffset": 2220,
+            "componentType": 5126,
+            "count": 4,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 1480,
+            "componentType": 5126,
+            "count": 4,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 1728,
+            "componentType": 5123,
+            "count": 6,
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 0,
+            "byteOffset": 2268,
+            "componentType": 5126,
+            "count": 4,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 1512,
+            "componentType": 5126,
+            "count": 4,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 1740,
+            "componentType": 5123,
+            "count": 6,
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 0,
+            "byteOffset": 2316,
+            "componentType": 5126,
+            "count": 4,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 1544,
+            "componentType": 5126,
+            "count": 4,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 1752,
+            "componentType": 5123,
+            "count": 6,
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 0,
+            "byteOffset": 2364,
+            "componentType": 5126,
+            "count": 185,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 1576,
+            "componentType": 5126,
+            "count": 185,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 1764,
+            "componentType": 5123,
+            "count": 864,
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 0,
+            "byteOffset": 4584,
+            "componentType": 5126,
+            "count": 4,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 3056,
+            "componentType": 5126,
+            "count": 4,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 3492,
+            "componentType": 5123,
+            "count": 6,
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 0,
+            "byteOffset": 4632,
+            "componentType": 5126,
+            "count": 4,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 3088,
+            "componentType": 5126,
+            "count": 4,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 3504,
+            "componentType": 5123,
+            "count": 6,
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 0,
+            "byteOffset": 4680,
+            "componentType": 5126,
+            "count": 4,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 3120,
+            "componentType": 5126,
+            "count": 4,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 3516,
+            "componentType": 5123,
+            "count": 6,
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 0,
+            "byteOffset": 4728,
+            "componentType": 5126,
+            "count": 4,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 3152,
+            "componentType": 5126,
+            "count": 4,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 3528,
+            "componentType": 5123,
+            "count": 6,
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 0,
+            "byteOffset": 4776,
+            "componentType": 5126,
+            "count": 4,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 3184,
+            "componentType": 5126,
+            "count": 4,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 3540,
+            "componentType": 5123,
+            "count": 6,
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 0,
+            "byteOffset": 4824,
+            "componentType": 5126,
+            "count": 4,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 3216,
+            "componentType": 5126,
+            "count": 4,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 3552,
+            "componentType": 5123,
+            "count": 6,
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 0,
+            "byteOffset": 4872,
+            "componentType": 5126,
+            "count": 4,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 3248,
+            "componentType": 5126,
+            "count": 4,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 3564,
+            "componentType": 5123,
+            "count": 6,
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 0,
+            "byteOffset": 4920,
+            "componentType": 5126,
+            "count": 4,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 3280,
+            "componentType": 5126,
+            "count": 4,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 3576,
+            "componentType": 5123,
+            "count": 6,
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 0,
+            "byteOffset": 4968,
+            "componentType": 5126,
+            "count": 4,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 3312,
+            "componentType": 5126,
+            "count": 4,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 3588,
+            "componentType": 5123,
+            "count": 6,
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 0,
+            "byteOffset": 5016,
+            "componentType": 5126,
+            "count": 4,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 3344,
+            "componentType": 5126,
+            "count": 4,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 3600,
+            "componentType": 5123,
+            "count": 6,
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 0,
+            "byteOffset": 5064,
+            "componentType": 5126,
+            "count": 227,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 3376,
+            "componentType": 5126,
+            "count": 227,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 3612,
+            "componentType": 5123,
+            "count": 1134,
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 0,
+            "byteOffset": 7788,
+            "componentType": 5126,
+            "count": 227,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 5192,
+            "componentType": 5126,
+            "count": 227,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 5880,
+            "componentType": 5123,
+            "count": 1134,
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 3,
+            "componentType": 5126,
+            "count": 3,
+            "type": "SCALAR",
+            "byteOffset": 0
+        },
+        {
+            "bufferView": 3,
+            "componentType": 5126,
+            "count": 3,
+            "type": "SCALAR",
+            "byteOffset": 12
+        },
+        {
+            "bufferView": 3,
+            "componentType": 5126,
+            "count": 3,
+            "type": "VEC3",
+            "byteOffset": 24
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 1,
+            "byteLength": 10512,
+            "byteStride": 12,
+            "byteOffset": 7008
+        },
+        {
+            "buffer": 1,
+            "byteLength": 7008,
+            "byteStride": 8,
+            "byteOffset": 0
+        },
+        {
+            "buffer": 1,
+            "byteLength": 8148,
+            "byteOffset": 17520
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 60
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 60,
+            "uri": "YLYBBkq9ZuJpvzgfWRbFq3.anim.bin"
+        },
+        {
+            "byteLength": 25668,
+            "uri": "eff_ui_leijie.mesh.bin"
+        }
+    ],
+    "extras": {},
+    "asset": {
+        "generator": "Unity 2019.4.14f1c1",
+        "extras": {
+            "exporterVersion": "2.2.1",
+            "VersionNumber": "20230626"
+        },
+        "version": "2.0"
+    },
+    "images": [
+        {
+            "uri": "Ug7v6sCwZnTSJQxwsfXPzN.png"
+        },
+        {
+            "uri": "Y9W9oFCXZ9aLZi8Jp3bUVn.png"
+        },
+        {
+            "uri": "6Bd4y7vMUp3U3Na16owZhC.png"
+        },
+        {
+            "uri": "RgcsBY6mvJswCypMRiBMe9.png"
+        },
+        {
+            "uri": "7DtAmQ9Pri1vHVkNzsLj3t.png"
+        },
+        {
+            "uri": "AnHa14Z3miz2ejpuNTGqsN.png"
+        },
+        {
+            "uri": "6ZFXeiVwEZd4AMxMVM4DMn.png"
+        },
+        {
+            "uri": "92UyTD2nDhxzequFkc3ob.png"
+        },
+        {
+            "uri": "KeVGG91AGq3rm4EiUYJX8J.png"
+        },
+        {
+            "uri": "RHRJn7tdnK7dQfwbYgWaAW.png"
+        },
+        {
+            "uri": "YM4sjtkMB5HRHLe7BT6pvQ.png"
+        },
+        {
+            "uri": "EvvbTTEWUtBS6xWk9UQiUA.png"
+        },
+        {
+            "uri": "Q69L5MmgSNC2xbBiAwZcDw.png"
+        },
+        {
+            "uri": "LyCGkRh8qHdf6365WuTXT7.png"
+        },
+        {
+            "uri": "FGqjddkbydTvNbdDhjtJ8w.png"
+        },
+        {
+            "uri": "FjLzH9iY5waSx74TDw5vHw.png"
+        },
+        {
+            "uri": "Bbthqgcv9kE9ijutC4pBaG.png"
+        },
+        {
+            "uri": "d2Q82PkkD9gUmFK1vCvqH.jpg"
+        }
+    ],
+    "materials": [
+        {
+            "extras": {
+                "main_opacity": {
+                    "alphaMode": 1,
+                    "useAlphaFromDiffuseTexture": true,
+                    "cull": "off",
+                    "renderQueue": 3002,
+                    "disableLighting": true,
+                    "fog": false,
+                    "diffuseColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "specularColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "ambientColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "emissionColor": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "diffuseTexture": {
+                        "index": 0,
+                        "texCoord": 0,
+                        "scale": [
+                            3,
+                            1
+                        ],
+                        "hasAlpha": true,
+                        "n": 0
+                    },
+                    "opacityTexture": {
+                        "index": 1,
+                        "texCoord": 0,
+                        "n": 0
+                    },
+                    "specularPower": 64,
+                    "directIntensity": 1,
+                    "emissiveIntensity": 1,
+                    "environmentIntensity": 1,
+                    "specularIntensity": 1,
+                    "type": "PiStandard"
+                }
+            },
+            "name": "yunmaterial_eff_yun_tw_002_15122",
+            "extensions": {}
+        },
+        {
+            "extras": {
+                "main_opacity": {
+                    "alphaMode": 1,
+                    "useAlphaFromDiffuseTexture": true,
+                    "cull": "off",
+                    "renderQueue": 3001,
+                    "disableLighting": true,
+                    "fog": false,
+                    "diffuseColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "specularColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "ambientColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "emissionColor": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "diffuseTexture": {
+                        "index": 2,
+                        "texCoord": 0,
+                        "hasAlpha": true,
+                        "n": 0
+                    },
+                    "specularPower": 64,
+                    "directIntensity": 1,
+                    "emissiveIntensity": 1,
+                    "environmentIntensity": 1,
+                    "specularIntensity": 1,
+                    "type": "PiStandard"
+                }
+            },
+            "name": "sd01material_eff_shandian_tw_002_15050",
+            "extensions": {}
+        },
+        {
+            "extras": {
+                "main_opacity": {
+                    "alphaMode": 1,
+                    "useAlphaFromDiffuseTexture": true,
+                    "cull": "off",
+                    "renderQueue": 3000,
+                    "disableLighting": true,
+                    "fog": false,
+                    "diffuseColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "specularColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "ambientColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "emissionColor": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "diffuseTexture": {
+                        "index": 3,
+                        "texCoord": 0,
+                        "hasAlpha": true,
+                        "n": 0
+                    },
+                    "specularPower": 64,
+                    "directIntensity": 1,
+                    "emissiveIntensity": 1,
+                    "environmentIntensity": 1,
+                    "specularIntensity": 1,
+                    "type": "PiStandard"
+                }
+            },
+            "name": "ssmaterial_eff_smoke_tw_002_15318",
+            "extensions": {}
+        },
+        {
+            "extras": {
+                "main_opacity": {
+                    "alphaMode": 1,
+                    "useAlphaFromDiffuseTexture": true,
+                    "cull": "off",
+                    "renderQueue": 3003,
+                    "disableLighting": true,
+                    "fog": false,
+                    "diffuseColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "specularColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "ambientColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "emissionColor": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "diffuseTexture": {
+                        "index": 4,
+                        "texCoord": 0,
+                        "hasAlpha": true,
+                        "n": 0
+                    },
+                    "specularPower": 64,
+                    "directIntensity": 1,
+                    "emissiveIntensity": 1,
+                    "environmentIntensity": 1,
+                    "specularIntensity": 1,
+                    "type": "PiStandard"
+                }
+            },
+            "name": "glowmaterial_eff_wm_glow_fml_001_04_15646",
+            "extensions": {}
+        },
+        {
+            "extras": {
+                "main_opacity": {
+                    "alphaMode": 1,
+                    "useAlphaFromDiffuseTexture": true,
+                    "cull": "off",
+                    "renderQueue": 3001,
+                    "disableLighting": true,
+                    "fog": false,
+                    "diffuseColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "specularColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "ambientColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "emissionColor": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "diffuseTexture": {
+                        "index": 5,
+                        "texCoord": 0,
+                        "scale": [
+                            2,
+                            1
+                        ],
+                        "hasAlpha": true,
+                        "n": 0
+                    },
+                    "opacityTexture": {
+                        "index": 1,
+                        "texCoord": 0,
+                        "n": 0
+                    },
+                    "specularPower": 64,
+                    "directIntensity": 1,
+                    "emissiveIntensity": 1,
+                    "environmentIntensity": 1,
+                    "specularIntensity": 1,
+                    "type": "PiStandard"
+                }
+            },
+            "name": "yunmaterial_eff_yun_tw_001_15302",
+            "extensions": {}
+        },
+        {
+            "extras": {
+                "main_opacity": {
+                    "alphaMode": 1,
+                    "useAlphaFromDiffuseTexture": true,
+                    "cull": "off",
+                    "renderQueue": 3003,
+                    "disableLighting": true,
+                    "fog": false,
+                    "diffuseColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "specularColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "ambientColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "emissionColor": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "diffuseTexture": {
+                        "index": 6,
+                        "texCoord": 0,
+                        "hasAlpha": true,
+                        "n": 0
+                    },
+                    "specularPower": 64,
+                    "directIntensity": 1,
+                    "emissiveIntensity": 1,
+                    "environmentIntensity": 1,
+                    "specularIntensity": 1,
+                    "type": "PiStandard"
+                }
+            },
+            "name": "yun01material_eff_glow_tw_001_15296",
+            "extensions": {}
+        },
+        {
+            "extras": {
+                "main_opacity": {
+                    "alphaMode": 1,
+                    "useAlphaFromDiffuseTexture": true,
+                    "cull": "off",
+                    "renderQueue": 3002,
+                    "diffuseLevel": 1.5,
+                    "emissiveMapLevel": 0,
+                    "disableLighting": true,
+                    "fog": false,
+                    "diffuseColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "specularColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "ambientColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "emissionColor": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "diffuseTexture": {
+                        "index": 7,
+                        "texCoord": 0,
+                        "hasAlpha": true,
+                        "n": 0
+                    },
+                    "specularPower": 64,
+                    "directIntensity": 1,
+                    "emissiveIntensity": 1,
+                    "environmentIntensity": 1,
+                    "specularIntensity": 1,
+                    "type": "PiStandard"
+                }
+            },
+            "name": "sd02material_eff_shandian_tw_001_15064",
+            "extensions": {}
+        },
+        {
+            "extras": {
+                "main_opacity": {
+                    "alphaMode": 1,
+                    "useAlphaFromDiffuseTexture": true,
+                    "cull": "off",
+                    "renderQueue": 3010,
+                    "diffuseLevel": 2,
+                    "emissiveMapLevel": 0,
+                    "disableLighting": true,
+                    "fog": false,
+                    "diffuseColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "specularColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "ambientColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "emissionColor": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "diffuseTexture": {
+                        "index": 8,
+                        "texCoord": 0,
+                        "hasAlpha": true,
+                        "n": 0
+                    },
+                    "specularPower": 64,
+                    "directIntensity": 1,
+                    "emissiveIntensity": 1,
+                    "environmentIntensity": 1,
+                    "specularIntensity": 1,
+                    "type": "PiStandard"
+                }
+            },
+            "name": "glow02material_eff_wm_glow_fml_001_12_15640",
+            "extensions": {}
+        },
+        {
+            "extras": {
+                "main_opacity": {
+                    "alphaMode": 1,
+                    "useAlphaFromDiffuseTexture": true,
+                    "cull": "off",
+                    "renderQueue": 3005,
+                    "opacityLevel": 1.5,
+                    "emissiveMapLevel": 0,
+                    "disableLighting": true,
+                    "opacityOV": 400,
+                    "fog": false,
+                    "diffuseColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "specularColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "ambientColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "emissionColor": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "diffuseTexture": {
+                        "index": 9,
+                        "texCoord": 0,
+                        "hasAlpha": true,
+                        "n": 0
+                    },
+                    "opacityTexture": {
+                        "index": 10,
+                        "texCoord": 0,
+                        "n": 0
+                    },
+                    "specularPower": 64,
+                    "directIntensity": 1,
+                    "emissiveIntensity": 1,
+                    "environmentIntensity": 1,
+                    "specularIntensity": 1,
+                    "type": "PiStandard"
+                }
+            },
+            "name": "dunmaterial_eff_ring_tw_001_15180",
+            "extensions": {}
+        },
+        {
+            "extras": {
+                "main_opacity": {
+                    "alphaMode": 2,
+                    "useAlphaFromDiffuseTexture": true,
+                    "cull": "off",
+                    "renderQueue": 3001,
+                    "disableLighting": true,
+                    "fog": false,
+                    "diffuseColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "specularColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "ambientColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "emissionColor": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "diffuseTexture": {
+                        "index": 4,
+                        "texCoord": 0,
+                        "hasAlpha": true,
+                        "n": 0
+                    },
+                    "specularPower": 64,
+                    "directIntensity": 1,
+                    "emissiveIntensity": 1,
+                    "environmentIntensity": 1,
+                    "specularIntensity": 1,
+                    "type": "PiStandard"
+                }
+            },
+            "name": "glowmaterial_eff_wm_glow_fml_001_b_15244",
+            "extensions": {}
+        },
+        {
+            "extras": {
+                "main_opacity": {
+                    "alphaMode": 1,
+                    "useAlphaFromDiffuseTexture": true,
+                    "cull": "off",
+                    "renderQueue": 3001,
+                    "emissiveMapLevel": 0,
+                    "disableLighting": true,
+                    "fog": false,
+                    "diffuseColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "specularColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "ambientColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "emissionColor": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "diffuseTexture": {
+                        "index": 4,
+                        "texCoord": 0,
+                        "hasAlpha": true,
+                        "n": 0
+                    },
+                    "specularPower": 64,
+                    "directIntensity": 1,
+                    "emissiveIntensity": 1,
+                    "environmentIntensity": 1,
+                    "specularIntensity": 1,
+                    "type": "PiStandard"
+                }
+            },
+            "name": "glow03material_eff_wm_glow_fml_001_04_15646",
+            "extensions": {}
+        },
+        {
+            "extras": {
+                "main_opacity": {
+                    "alphaMode": 1,
+                    "useAlphaFromDiffuseTexture": true,
+                    "cull": "off",
+                    "renderQueue": 3001,
+                    "emissiveMapLevel": 0,
+                    "disableLighting": true,
+                    "fog": false,
+                    "diffuseColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "specularColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "ambientColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "emissionColor": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "diffuseTexture": {
+                        "index": 11,
+                        "texCoord": 0,
+                        "hasAlpha": true,
+                        "n": 0
+                    },
+                    "specularPower": 64,
+                    "directIntensity": 1,
+                    "emissiveIntensity": 1,
+                    "environmentIntensity": 1,
+                    "specularIntensity": 1,
+                    "type": "PiStandard"
+                }
+            },
+            "name": "ringmaterial_eff_ring_tw_002_15214",
+            "extensions": {}
+        },
+        {
+            "extras": {
+                "main_opacity": {
+                    "alphaMode": 1,
+                    "useAlphaFromDiffuseTexture": true,
+                    "cull": "off",
+                    "renderQueue": 3000,
+                    "disableLighting": true,
+                    "fog": false,
+                    "diffuseColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "specularColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "ambientColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "emissionColor": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "diffuseTexture": {
+                        "index": 12,
+                        "texCoord": 0,
+                        "hasAlpha": true,
+                        "n": 0
+                    },
+                    "specularPower": 64,
+                    "directIntensity": 1,
+                    "emissiveIntensity": 1,
+                    "environmentIntensity": 1,
+                    "specularIntensity": 1,
+                    "type": "PiStandard"
+                }
+            },
+            "name": "dotmaterial_eff_wm_glow_fml_001_27_15654",
+            "extensions": {}
+        },
+        {
+            "extras": {
+                "main_opacity": {
+                    "alphaMode": 1,
+                    "useAlphaFromDiffuseTexture": true,
+                    "cull": "off",
+                    "renderQueue": 3000,
+                    "disableLighting": true,
+                    "fog": false,
+                    "diffuseColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "specularColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "ambientColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "emissionColor": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "diffuseTexture": {
+                        "index": 13,
+                        "texCoord": 0,
+                        "hasAlpha": true,
+                        "n": 0
+                    },
+                    "specularPower": 64,
+                    "directIntensity": 1,
+                    "emissiveIntensity": 1,
+                    "environmentIntensity": 1,
+                    "specularIntensity": 1,
+                    "type": "PiStandard"
+                }
+            },
+            "name": "smokematerial_eff_smoke_tw_001_15262",
+            "extensions": {}
+        },
+        {
+            "extras": {
+                "main_opacity": {
+                    "alphaMode": 1,
+                    "useAlphaFromDiffuseTexture": true,
+                    "cull": "off",
+                    "renderQueue": 3010,
+                    "diffuseLevel": 2,
+                    "emissiveMapLevel": 0,
+                    "disableLighting": true,
+                    "fog": false,
+                    "diffuseColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "specularColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "ambientColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "emissionColor": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "diffuseTexture": {
+                        "index": 14,
+                        "texCoord": 0,
+                        "hasAlpha": true,
+                        "n": 0
+                    },
+                    "specularPower": 64,
+                    "directIntensity": 1,
+                    "emissiveIntensity": 1,
+                    "environmentIntensity": 1,
+                    "specularIntensity": 1,
+                    "type": "PiStandard"
+                }
+            },
+            "name": "glow04material_eff_wm_glow_fml_002_10_16376",
+            "extensions": {}
+        },
+        {
+            "extras": {
+                "main_opacity": {
+                    "alphaMode": 1,
+                    "useAlphaFromDiffuseTexture": true,
+                    "cull": "off",
+                    "renderQueue": 3002,
+                    "emissiveMapLevel": 0,
+                    "disableLighting": true,
+                    "diffuseOU": 1000,
+                    "diffuseOV": 1000,
+                    "fog": false,
+                    "diffuseColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "specularColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "ambientColor": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "emissionColor": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "diffuseTexture": {
+                        "index": 15,
+                        "texCoord": 0,
+                        "scale": [
+                            1,
+                            3
+                        ],
+                        "hasAlpha": true,
+                        "n": 0
+                    },
+                    "opacityTexture": {
+                        "index": 4,
+                        "texCoord": 0,
+                        "offset": [
+                            0,
+                            -0.15
+                        ],
+                        "scale": [
+                            1,
+                            0.5
+                        ],
+                        "n": 0
+                    },
+                    "specularPower": 64,
+                    "directIntensity": 1,
+                    "emissiveIntensity": 1,
+                    "environmentIntensity": 1,
+                    "specularIntensity": 1,
+                    "type": "PiStandard"
+                }
+            },
+            "name": "noise01material_eff_mask_tw_001_15290",
+            "extensions": {}
+        },
+        {
+            "extras": {
+                "distortionUV": {
+                    "alphaMode": 1,
+                    "diffuseLevel": 0,
+                    "cull": "off",
+                    "alpha": 1,
+                    "renderQueue": 3002,
+                    "distortionX": 0.1,
+                    "distortionY": 0.1,
+                    "distortionSX": 0.2,
+                    "distortionSY": 0.2,
+                    "maskFlowMode": 1,
+                    "vertexColorFactor": 0,
+                    "opacityFromMaskBlue": 1,
+                    "diffuseColor": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "diffuseTexture": {
+                        "index": 16,
+                        "texCoord": 0,
+                        "scale": [
+                            3,
+                            5
+                        ],
+                        "n": 0
+                    },
+                    "maskTexture": {
+                        "index": 17,
+                        "texCoord": 0,
+                        "scale": [
+                            1,
+                            2
+                        ],
+                        "n": 0
+                    },
+                    "opacityTexture": {
+                        "index": 17,
+                        "texCoord": 0,
+                        "offset": [
+                            0,
+                            1.94
+                        ],
+                        "scale": [
+                            1,
+                            0.5
+                        ],
+                        "n": 0
+                    },
+                    "type": "DistortionUV"
+                }
+            },
+            "name": "noise02material_eff_noise_tw_001_15308",
+            "extensions": {}
+        }
+    ],
+    "meshes": [
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 0,
+                        "TEXCOORD_0": 1
+                    },
+                    "indices": 2,
+                    "material": 0,
+                    "mode": 4
+                }
+            ],
+            "extras": {
+                "alphaIndex": 3002,
+                "geometry": "eff_ui_leijie.mesh.bin",
+                "layerMask": 1
+            },
+            "name": "ef_yun_tw_002"
+        },
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 3,
+                        "TEXCOORD_0": 4
+                    },
+                    "indices": 5,
+                    "material": 1,
+                    "mode": 4
+                }
+            ],
+            "extras": {
+                "alphaIndex": 3001,
+                "geometry": "eff_ui_leijie.mesh.bin",
+                "layerMask": 1
+            },
+            "name": "eff_wm_Plane_fml_001"
+        },
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 6,
+                        "TEXCOORD_0": 7
+                    },
+                    "indices": 8,
+                    "material": 2,
+                    "mode": 4
+                }
+            ],
+            "extras": {
+                "alphaIndex": 3000,
+                "geometry": "eff_ui_leijie.mesh.bin",
+                "layerMask": 1
+            },
+            "name": "eff_wm_Plane_fml_001"
+        },
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 9,
+                        "TEXCOORD_0": 10
+                    },
+                    "indices": 11,
+                    "material": 3,
+                    "mode": 4
+                }
+            ],
+            "extras": {
+                "alphaIndex": 3003,
+                "geometry": "eff_ui_leijie.mesh.bin",
+                "layerMask": 1
+            },
+            "name": "eff_wm_Plane_fml_001"
+        },
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 12,
+                        "TEXCOORD_0": 13
+                    },
+                    "indices": 14,
+                    "material": 4,
+                    "mode": 4
+                }
+            ],
+            "extras": {
+                "alphaIndex": 3001,
+                "geometry": "eff_ui_leijie.mesh.bin",
+                "layerMask": 1
+            },
+            "name": "ef_yun_tw_002"
+        },
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 15,
+                        "TEXCOORD_0": 16
+                    },
+                    "indices": 17,
+                    "material": 5,
+                    "mode": 4
+                }
+            ],
+            "extras": {
+                "alphaIndex": 3003,
+                "geometry": "eff_ui_leijie.mesh.bin",
+                "layerMask": 1
+            },
+            "name": "eff_wm_Plane_fml_001"
+        },
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 18,
+                        "TEXCOORD_0": 19
+                    },
+                    "indices": 20,
+                    "material": 6,
+                    "mode": 4
+                }
+            ],
+            "extras": {
+                "alphaIndex": 3002,
+                "geometry": "eff_ui_leijie.mesh.bin",
+                "layerMask": 1
+            },
+            "name": ""
+        },
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 21,
+                        "TEXCOORD_0": 22
+                    },
+                    "indices": 23,
+                    "material": 7,
+                    "mode": 4
+                }
+            ],
+            "extras": {
+                "alphaIndex": 3010,
+                "geometry": "eff_ui_leijie.mesh.bin",
+                "layerMask": 1
+            },
+            "name": "eff_wm_Plane_fml_001"
+        },
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 24,
+                        "TEXCOORD_0": 25
+                    },
+                    "indices": 26,
+                    "material": 8,
+                    "mode": 4
+                }
+            ],
+            "extras": {
+                "alphaIndex": 3005,
+                "geometry": "eff_ui_leijie.mesh.bin",
+                "layerMask": 1
+            },
+            "name": "eff_wm_Plane_fml_001"
+        },
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 27,
+                        "TEXCOORD_0": 28
+                    },
+                    "indices": 29,
+                    "material": 9,
+                    "mode": 4
+                }
+            ],
+            "extras": {
+                "alphaIndex": 3001,
+                "geometry": "eff_ui_leijie.mesh.bin",
+                "layerMask": 1
+            },
+            "name": "eff_wm_Plane_fml_001"
+        },
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 30,
+                        "TEXCOORD_0": 31
+                    },
+                    "indices": 32,
+                    "material": 10,
+                    "mode": 4
+                }
+            ],
+            "extras": {
+                "alphaIndex": 3001,
+                "geometry": "eff_ui_leijie.mesh.bin",
+                "layerMask": 1
+            },
+            "name": "eff_wm_Plane_fml_001"
+        },
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 33,
+                        "TEXCOORD_0": 34
+                    },
+                    "indices": 35,
+                    "material": 11,
+                    "mode": 4
+                }
+            ],
+            "extras": {
+                "alphaIndex": 3001,
+                "geometry": "eff_ui_leijie.mesh.bin",
+                "layerMask": 1
+            },
+            "name": "eff_wm_Plane_fml_001"
+        },
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 36,
+                        "TEXCOORD_0": 37
+                    },
+                    "indices": 38,
+                    "material": 12,
+                    "mode": 4
+                }
+            ],
+            "extras": {
+                "alphaIndex": 3000,
+                "geometry": "eff_ui_leijie.mesh.bin",
+                "layerMask": 512
+            },
+            "name": ""
+        },
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 39,
+                        "TEXCOORD_0": 40
+                    },
+                    "indices": 41,
+                    "material": 13,
+                    "mode": 4
+                }
+            ],
+            "extras": {
+                "alphaIndex": 3000,
+                "geometry": "eff_ui_leijie.mesh.bin",
+                "layerMask": 512
+            },
+            "name": "eff_wm_Plane_fml_001"
+        },
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 42,
+                        "TEXCOORD_0": 43
+                    },
+                    "indices": 44,
+                    "material": 14,
+                    "mode": 4
+                }
+            ],
+            "extras": {
+                "alphaIndex": 3010,
+                "geometry": "eff_ui_leijie.mesh.bin",
+                "layerMask": 1
+            },
+            "name": "eff_wm_Plane_fml_001"
+        },
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 45,
+                        "TEXCOORD_0": 46
+                    },
+                    "indices": 47,
+                    "material": 15,
+                    "mode": 4
+                }
+            ],
+            "extras": {
+                "alphaIndex": 3002,
+                "geometry": "eff_ui_leijie.mesh.bin",
+                "layerMask": 1
+            },
+            "name": "eff_sphere_tw_001"
+        },
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 48,
+                        "TEXCOORD_0": 49
+                    },
+                    "indices": 50,
+                    "material": 16,
+                    "mode": 4
+                }
+            ],
+            "extras": {
+                "alphaIndex": 3002,
+                "castShadow": 1,
+                "geometry": "eff_ui_leijie.mesh.bin",
+                "layerMask": 1,
+                "receiveShadows": 1
+            },
+            "name": "eff_sphere_tw_001"
+        }
+    ],
+    "nodes": [
+        {
+            "extras": {},
+            "children": [
+                1,
+                9
+            ],
+            "matrix": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                1.945976,
+                -0.9993068,
+                -0.3411176,
+                1
+            ],
+            "name": "eff_ui_leijie_-13182"
+        },
+        {
+            "extras": {},
+            "children": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+            ],
+            "mesh": 0,
+            "name": "yun_-13186",
+            "rotation": [
+                -0.6441237,
+                0,
+                0,
+                0.7649214
+            ],
+            "translation": [
+                0,
+                7.45,
+                0.09
+            ]
+        },
+        {
+            "extras": {},
+            "mesh": 1,
+            "name": "sd01_-13210"
+        },
+        {
+            "extras": {},
+            "mesh": 2,
+            "name": "ss_-13212",
+            "translation": [
+                0,
+                0,
+                -0.19
+            ]
+        },
+        {
+            "extras": {},
+            "mesh": 3,
+            "name": "glow_-13214",
+            "translation": [
+                0,
+                0,
+                -0.1
+            ]
+        },
+        {
+            "extras": {},
+            "mesh": 4,
+            "name": "yun_-13216",
+            "translation": [
+                0,
+                0,
+                -0.27
+            ]
+        },
+        {
+            "extras": {},
+            "mesh": 5,
+            "name": "yun01_-13218",
+            "translation": [
+                0,
+                0,
+                -0.36
+            ]
+        },
+        {
+            "extras": {},
+            "mesh": 6,
+            "name": "sd02_-13220",
+            "translation": [
+                0,
+                0,
+                0.1
+            ]
+        },
+        {
+            "extras": {
+                "meshParticle": {
+                    "name": "glow02",
+                    "duration": 5,
+                    "startDelay": 0,
+                    "looping": 1,
+                    "prewarm": 0,
+                    "localP": [
+                        0,
+                        -1,
+                        0
+                    ],
+                    "localS": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "localR": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "simulationSpaceIsWorld": 0,
+                    "scalingMode": 0,
+                    "renderAlignment": 0,
+                    "renderMode": 4,
+                    "stretchedLengthScale": 2,
+                    "stretchedVelocityScale": 0,
+                    "renderPivot": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "maxParticles": 5,
+                    "startSpeed": [
+                        1,
+                        1,
+                        0
+                    ],
+                    "lifetime": [
+                        1,
+                        2,
+                        0.15,
+                        0.1
+                    ],
+                    "startColor": [
+                        4,
+                        1,
+                        [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    ],
+                    "startSize": [
+                        3,
+                        2,
+                        [
+                            5,
+                            3,
+                            5
+                        ],
+                        [
+                            10,
+                            5,
+                            10
+                        ]
+                    ],
+                    "startRotation": [
+                        1,
+                        1,
+                        0
+                    ],
+                    "gravity": [
+                        1,
+                        1,
+                        0
+                    ],
+                    "emission": [
+                        10
+                    ],
+                    "shape": {
+                        "type": 3,
+                        "radius": 1,
+                        "radiusThickness": 1,
+                        "arc": {
+                            "mode": 1,
+                            "value": 360,
+                            "spread": 0,
+                            "speed": 1
+                        },
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "position": [
+                            0,
+                            0,
+                            0
+                        ],
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ],
+                        "alignDir": 0,
+                        "randomize": [
+                            0,
+                            0,
+                            0
+                        ]
+                    },
+                    "colorOverLifetime": [
+                        4,
+                        4,
+                        [
+                            [
+                                [
+                                    0,
+                                    1
+                                ],
+                                [
+                                    0.6529488,
+                                    0.4103774
+                                ]
+                            ],
+                            [
+                                [
+                                    0,
+                                    1
+                                ],
+                                [
+                                    0.6529488,
+                                    0.7351397
+                                ]
+                            ],
+                            [
+                                [
+                                    0,
+                                    1
+                                ],
+                                [
+                                    0.6529488,
+                                    1
+                                ]
+                            ],
+                            [
+                                [
+                                    0.1353018,
+                                    1
+                                ],
+                                [
+                                    1,
+                                    0
+                                ]
+                            ]
+                        ]
+                    ],
+                    "sizeOverLifetime": [
+                        1,
+                        4,
+                        [
+                            [
+                                [
+                                    0,
+                                    1,
+                                    -2,
+                                    -2
+                                ],
+                                [
+                                    1,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            ],
+                            1
+                        ]
+                    ]
+                }
+            },
+            "mesh": 7,
+            "name": "glow02_-13222",
+            "translation": [
+                0,
+                -1,
+                0
+            ]
+        },
+        {
+            "extras": {},
+            "children": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17
+            ],
+            "mesh": 8,
+            "name": "dun_-13188",
+            "translation": [
+                0,
+                -3.5,
+                0
+            ]
+        },
+        {
+            "extras": {},
+            "mesh": 9,
+            "name": "glow_-13192",
+            "translation": [
+                0,
+                1.19,
+                0
+            ]
+        },
+        {
+            "extras": {},
+            "mesh": 10,
+            "name": "glow03_-13194",
+            "rotation": [
+                0.5735764,
+                0,
+                0,
+                0.8191521
+            ],
+            "translation": [
+                0,
+                -1.39,
+                0
+            ]
+        },
+        {
+            "extras": {},
+            "mesh": 11,
+            "name": "ring_-13196",
+            "rotation": [
+                0.6427876,
+                0,
+                0,
+                0.7660445
+            ],
+            "translation": [
+                0,
+                -1.4,
+                0
+            ]
+        },
+        {
+            "extras": {},
+            "mesh": 12,
+            "name": "dot_-13198",
+            "rotation": [
+                -0.7071068,
+                0,
+                0,
+                0.7071068
+            ],
+            "translation": [
+                0,
+                -1.2,
+                0
+            ]
+        },
+        {
+            "mesh": 13,
+            "name": "smoke_-13200",
+            "rotation": [
+                -0.7071068,
+                0,
+                0,
+                0.7071068
+            ],
+            "translation": [
+                0,
+                -1,
+                0
+            ]
+        },
+        {
+            "mesh": 14,
+            "name": "glow04_-13202",
+            "translation": [
+                0,
+                1.61,
+                0
+            ]
+        },
+        {
+            "mesh": 15,
+            "name": "noise01_-13204",
+            "rotation": [
+                0,
+                0.7071068,
+                0.7071068,
+                0
+            ],
+            "translation": [
+                0,
+                -0.82,
+                0
+            ]
+        },
+        {
+            "extras": {
+                "animCount": 2
+            },
+            "mesh": 16,
+            "name": "noise02_-13206",
+            "rotation": [
+                0,
+                0.7071068,
+                0.7071068,
+                0
+            ],
+            "scale": [
+                3.5,
+                3.5,
+                4.5
+            ],
+            "translation": [
+                0,
+                -0.82,
+                0
+            ]
+        }
+    ],
+    "samplers": [
+        {
+            "minFilter": 9985,
+            "wrapS": 10497,
+            "wrapT": 10497
+        },
+        {
+            "minFilter": 9985,
+            "wrapS": 10497,
+            "wrapT": 10497
+        },
+        {
+            "minFilter": 9985,
+            "wrapS": 10497,
+            "wrapT": 10497
+        },
+        {
+            "minFilter": 9985,
+            "wrapS": 10497,
+            "wrapT": 10497
+        },
+        {
+            "minFilter": 9985,
+            "wrapS": 10497,
+            "wrapT": 10497
+        },
+        {
+            "minFilter": 9985,
+            "wrapS": 10497,
+            "wrapT": 10497
+        },
+        {
+            "minFilter": 9985,
+            "wrapS": 10497,
+            "wrapT": 10497
+        },
+        {
+            "minFilter": 9985,
+            "wrapS": 10497,
+            "wrapT": 10497
+        },
+        {
+            "minFilter": 9985,
+            "wrapS": 10497,
+            "wrapT": 10497
+        },
+        {
+            "minFilter": 9985,
+            "wrapS": 10497,
+            "wrapT": 10497
+        },
+        {
+            "minFilter": 9985,
+            "wrapS": 10497,
+            "wrapT": 10497
+        },
+        {
+            "minFilter": 9985,
+            "wrapS": 10497,
+            "wrapT": 10497
+        },
+        {
+            "minFilter": 9985,
+            "wrapS": 10497,
+            "wrapT": 10497
+        },
+        {
+            "minFilter": 9985,
+            "wrapS": 10497,
+            "wrapT": 10497
+        },
+        {
+            "minFilter": 9985,
+            "wrapS": 10497,
+            "wrapT": 10497
+        },
+        {
+            "minFilter": 9985,
+            "wrapS": 10497,
+            "wrapT": 10497
+        },
+        {
+            "minFilter": 9985,
+            "wrapS": 10497,
+            "wrapT": 10497
+        },
+        {
+            "minFilter": 9729,
+            "wrapS": 10497,
+            "wrapT": 10497
+        }
+    ],
+    "scenes": [
+        {
+            "name": "defaultScene",
+            "nodes": [
+                0
+            ],
+            "extensions": {
+                "PI_environment": {}
+            }
+        }
+    ],
+    "textures": [
+        {
+            "sampler": 0,
+            "source": 0
+        },
+        {
+            "sampler": 1,
+            "source": 1
+        },
+        {
+            "sampler": 2,
+            "source": 2
+        },
+        {
+            "sampler": 3,
+            "source": 3
+        },
+        {
+            "sampler": 4,
+            "source": 4
+        },
+        {
+            "sampler": 5,
+            "source": 5
+        },
+        {
+            "sampler": 6,
+            "source": 6
+        },
+        {
+            "sampler": 7,
+            "source": 7
+        },
+        {
+            "sampler": 8,
+            "source": 8
+        },
+        {
+            "sampler": 9,
+            "source": 9
+        },
+        {
+            "sampler": 10,
+            "source": 10
+        },
+        {
+            "sampler": 11,
+            "source": 11
+        },
+        {
+            "sampler": 12,
+            "source": 12
+        },
+        {
+            "sampler": 13,
+            "source": 13
+        },
+        {
+            "sampler": 14,
+            "source": 14
+        },
+        {
+            "sampler": 15,
+            "source": 15
+        },
+        {
+            "sampler": 16,
+            "source": 16
+        },
+        {
+            "sampler": 17,
+            "source": 17
+        }
+    ]
+}

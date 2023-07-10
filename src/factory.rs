@@ -554,7 +554,7 @@ pub fn sys_gltf_decode(
         let mut animation_index = 0;
         for animation in gltf.animations() {
             let key_animegroup = Atom::from(format!("anim{}", animation_index,));
-            factory.gltf_create_animation_group(root, &key_animegroup);
+            let id_group = factory.gltf_create_animation_group(root, &key_animegroup);
     
             let mut channel_index = 0;
     
@@ -599,9 +599,9 @@ pub fn sys_gltf_decode(
     
                                             factory.gltf_create_target_animation(
                                                 asset_curve,
+                                                scene_id.clone(),
                                                 node_id.clone(),
-                                                node_id.clone(),
-                                                &key_animegroup,
+                                                id_group
                                             );
                                         }
                                         gltf::animation::Interpolation::Step => {
@@ -634,9 +634,9 @@ pub fn sys_gltf_decode(
     
                                             factory.gltf_create_target_animation(
                                                 asset_curve,
+                                                scene_id.clone(),
                                                 node_id.clone(),
-                                                node_id.clone(),
-                                                &key_animegroup,
+                                                id_group
                                             );
                                         }
                                         gltf::animation::Interpolation::CubicSpline => {
@@ -684,9 +684,9 @@ pub fn sys_gltf_decode(
     
                                             factory.gltf_create_target_animation(
                                                 asset_curve,
+                                                scene_id.clone(),
                                                 node_id.clone(),
-                                                node_id.clone(),
-                                                &key_animegroup,
+                                                id_group
                                             );
                                         }
                                     }
@@ -733,9 +733,9 @@ pub fn sys_gltf_decode(
     
                                             factory.gltf_create_target_animation(
                                                 asset_curve,
-                                                root.clone(),
+                                                scene_id.clone(),
                                                 node_id.clone(),
-                                                &key_animegroup,
+                                                id_group
                                             );
                                         }
                                         gltf::animation::Interpolation::Step => {
@@ -778,9 +778,9 @@ pub fn sys_gltf_decode(
     
                                             factory.gltf_create_target_animation(
                                                 asset_curve,
-                                                root.clone(),
+                                                scene_id.clone(),
                                                 node_id.clone(),
-                                                &key_animegroup,
+                                                id_group
                                             );
                                         }
                                         gltf::animation::Interpolation::CubicSpline => {
@@ -853,9 +853,9 @@ pub fn sys_gltf_decode(
     
                                             factory.gltf_create_target_animation(
                                                 asset_curve,
-                                                root.clone(),
+                                                scene_id.clone(),
                                                 node_id.clone(),
-                                                &key_animegroup,
+                                                id_group
                                             );
                                         }
                                     }
@@ -887,9 +887,9 @@ pub fn sys_gltf_decode(
     
                                             factory.gltf_create_target_animation(
                                                 asset_curve,
-                                                root.clone(),
+                                                scene_id.clone(),
                                                 node_id.clone(),
-                                                &key_animegroup,
+                                                id_group
                                             );
                                         }
                                         gltf::animation::Interpolation::Step => {
@@ -918,9 +918,9 @@ pub fn sys_gltf_decode(
     
                                             factory.gltf_create_target_animation(
                                                 asset_curve,
-                                                root.clone(),
+                                                scene_id.clone(),
                                                 node_id.clone(),
-                                                &key_animegroup,
+                                                id_group
                                             );
                                         }
                                         gltf::animation::Interpolation::CubicSpline => {
@@ -966,9 +966,9 @@ pub fn sys_gltf_decode(
     
                                             factory.gltf_create_target_animation(
                                                 asset_curve,
-                                                root.clone(),
+                                                scene_id.clone(),
                                                 node_id.clone(),
-                                                &key_animegroup,
+                                                id_group
                                             );
                                         }
                                     }
@@ -983,7 +983,7 @@ pub fn sys_gltf_decode(
                 channel_index += 1;
             }
     
-            factory.gltf_start_animation_group(root, &key_animegroup);
+            factory.gltf_start_animation_group(root, id_group);
             animation_index += 1;
         }
         

@@ -48,3 +48,23 @@ winit = { path = "../winit" }
 
 [patch."https://github.com/GaiaWorld/pi_scene"]
 pi_scene_math = { path = "../pi_scene/crates/pi_scene_math" }
+
+[dev-dependencies]
+pi_3d                   = { path = "../pi_3d" }
+pi_async                = "0.5"
+pi_bevy_render_plugin   = { git = "https://github.com/GaiaWorld/pi_render_bevy"}
+pi_bevy_winit_window    = { git = "https://github.com/GaiaWorld/pi_render_bevy"}
+pi_bevy_post_process    = { git = "https://github.com/GaiaWorld/pi_render_bevy"}
+pi_bevy_ecs_extend      = { git = "https://github.com/GaiaWorld/pi_render_bevy"}
+pi_bevy_asset           = { git = "https://github.com/GaiaWorld/pi_render_bevy"}
+log                 = "0.4"
+env_logger          = "0.9"
+
+
+[[example]]
+name = "gltfskin"
+path = "examples/gltf/simple_skin.rs"
+
+[[example]]
+name = "custom_extras"
+path = "examples/gltf/custom_extras.rs"
