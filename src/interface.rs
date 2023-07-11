@@ -2,44 +2,28 @@ use std::{ops::Range, path::Path};
 
 use bevy::prelude::Entity;
 use default_render::SingleIDBaseDefaultMaterial;
-use particle::{
-    emitter::ishape_emitter_type::{EBoxShapeMode, EShapeEmitterArcMode},
-    iparticle_system_config::{
-        FourGradientInfo, IParticleSystemConfig, IShape, IShapeArc, IShapeArcBurstSpread,
-        IShapeArcLoop, IShapeArcPingPong, IShapeArcRandom, IShapeBox, IShapeCircle, IShapeCone,
-        IShapeEdge, IShapeHemisphere, IShapeRectangle, IShapeSphere, OneParamInfo, ParamInfo,
-        ThreeParamInfo,
-    },
-    particle_system_tool::{
-        EMeshParticleScaleMode, EMeshParticleSpaceMode, ERenderAlignment, ERenderMode,
-    },
-};
+
 use pi_animation::{animation::AnimationInfo, animation_group::AnimationGroupID};
 use pi_atom::Atom;
-use pi_curves::curve::frame_curve::FrameCurve;
+use pi_curves::curve::{
+    frame::FrameDataValue,
+    frame_curve::{frames::interplate_frame_values_step, FrameCurve},
+};
 
 use pi_engine_shell::prelude::*;
 use pi_gltf::{
-    image,
-    iter::{Images, Textures},
-    json::Value,
-    Material,
+    accessor::Iter,
+    animation::{util::ReadOutputs, Channel, Interpolation},
 };
-use pi_node_materials::prelude::{BlockMainTexture, BlockMaskTexture};
+
+use pi_node_materials::NodeMaterialBlocks;
 use pi_render::rhi::{BufferAddress, VertexFormat};
 use pi_scene_context::prelude::*;
 use pi_scene_math::{
     coordiante_system::CoordinateSytem3, vector::TToolMatrix, Matrix, Quaternion, Rotation3,
     Vector3,
 };
-use unlit_material::{
-    effects::{
-        distortion_uv::DistortionUVShader, main_opacity::MainOpacityShader,
-        main_opacity_fresnel::MainOpacityFresnelShader, two_opacity_mix::TwoOpacityMixShader,
-    },
-    shader::UnlitShader,
-};
-use pi_node_materials::NodeMaterialBlocks;
+use unlit_material::shader::UnlitShader;
 
 pub enum FrameCurveType {
     Scaling(FrameCurve<LocalScaling>),
@@ -100,8 +84,7 @@ impl<'a, 'b> GLTFAPI<'a, 'b> {
                 .transformcmds
                 .localpos
                 .push(OpsTransformNodeLocalPosition::ops(
-                    entity,
-                    pos[0], pos[1], pos[2],
+                    entity, pos[0], pos[1], pos[2],
                 ));
         }
 
@@ -110,8 +93,7 @@ impl<'a, 'b> GLTFAPI<'a, 'b> {
                 .transformcmds
                 .localscl
                 .push(OpsTransformNodeLocalScaling::ops(
-                    entity,
-                    scaling[0], scaling[1], scaling[2],
+                    entity, scaling[0], scaling[1], scaling[2],
                 ));
         }
 
@@ -121,22 +103,26 @@ impl<'a, 'b> GLTFAPI<'a, 'b> {
                 .localrot
                 .push(OpsTransformNodeLocalEuler::ops(
                     entity,
-                    rotation[0], rotation[1], rotation[2],
-                ));
-        }
-
-        if let Some(rotation) = rotation_quaterion {
-            // TODO: need to check
-
-            self.commands
-                .transformcmds
-                .localrotq
-                .push(OpsTransformNodeLocalRotationQuaternion::ops(
-                    entity,
                     rotation[0],
                     rotation[1],
                     rotation[2],
-                    rotation[3],
+                ));
+        }
+
+        if let Some(rotation_quaterion) = rotation_quaterion {
+            // TODO: need to check
+            let rotation = Quaternion::from_quaternion(nalgebra::Quaternion::new(
+                rotation_quaterion[0],
+                rotation_quaterion[1],
+                rotation_quaterion[2],
+                rotation_quaterion[3],
+            ))
+            .euler_angles();
+            self.commands
+                .transformcmds
+                .localrot
+                .push(OpsTransformNodeLocalEuler::ops(
+                    entity, rotation.0, rotation.1, rotation.2,
                 ));
         }
 
@@ -159,16 +145,14 @@ impl<'a, 'b> GLTFAPI<'a, 'b> {
                 .transformcmds
                 .localpos
                 .push(OpsTransformNodeLocalPosition::ops(
-                    entity,
-                    postion[0], postion[1], postion[2],
+                    entity, postion[0], postion[1], postion[2],
                 ));
 
             self.commands
                 .transformcmds
                 .localscl
                 .push(OpsTransformNodeLocalScaling::ops(
-                    entity,
-                    scaling[0], scaling[1], scaling[2],
+                    entity, scaling[0], scaling[1], scaling[2],
                 ));
 
             let euler_angles = rotation.euler_angles();
@@ -177,7 +161,9 @@ impl<'a, 'b> GLTFAPI<'a, 'b> {
                 .localrot
                 .push(OpsTransformNodeLocalEuler::ops(
                     entity,
-                    euler_angles.0, euler_angles.1, euler_angles.2,
+                    euler_angles.0,
+                    euler_angles.1,
+                    euler_angles.2,
                 ));
         }
     }
@@ -364,7 +350,11 @@ impl<'a, 'b> GLTFAPI<'a, 'b> {
         None
     }
 
-    pub fn gltf_create_animation_group(&mut self, id_obj: ObjectID, key_animegroup: &Atom) -> AnimationGroupID {
+    pub fn gltf_create_animation_group(
+        &mut self,
+        id_obj: ObjectID,
+        key_animegroup: &Atom,
+    ) -> AnimationGroupID {
         // let _ = self.create_animation_group(id_obj, key_animegroup);
         let id_group = self
             .commands
@@ -372,7 +362,10 @@ impl<'a, 'b> GLTFAPI<'a, 'b> {
             .scene_ctxs
             .create_group(self.scene_id)
             .unwrap();
-        self.commands.animegroupcmd.global.record_group(id_obj, id_group);
+        self.commands
+            .animegroupcmd
+            .global
+            .record_group(id_obj, id_group);
         // todo!()
 
         id_group
@@ -406,10 +399,192 @@ impl<'a, 'b> GLTFAPI<'a, 'b> {
                 .create_animation(0, curve),
         };
 
-        self.commands.animegroupcmd.scene_ctxs.add_target_anime(id_scene, id_target, key_animegroup, animation);
+        self.commands.animegroupcmd.scene_ctxs.add_target_anime(
+            id_scene,
+            id_target,
+            key_animegroup,
+            animation,
+        );
     }
 
     pub fn gltf_start_animation_group(&mut self, id_scene: ObjectID, group: AnimationGroupID) {
-        self.commands.animegroupcmd.scene_ctxs.start_with_progress(id_scene, group, AnimationGroupParam::default());
+        self.commands.animegroupcmd.scene_ctxs.start_with_progress(
+            id_scene,
+            group,
+            AnimationGroupParam::default(),
+        );
+    }
+
+    pub fn gltf_create_assets_curve(
+        &mut self,
+        key_curve: Atom,
+        channel: Channel,
+        inputs: Iter<f32>,
+        outputs: ReadOutputs,
+    ) -> AssetFrameCurveType {
+        if let Some(curve) = self.gltf_check_anim_curve(&key_curve) {
+            curve
+        } else {
+            let interpolation = channel.sampler().interpolation();
+
+            match outputs {
+                ReadOutputs::Translations(mut t) => {
+                    let mut curve = create_vurve(&interpolation);
+                    if interpolation == Interpolation::CubicSpline {
+                        for input in inputs {
+                            let input_tangent = t.next().unwrap();
+                            let keyframe = t.next().unwrap();
+                            let output_tangent = t.next().unwrap();
+
+                            curve.curve_cubic_splice_frame(
+                                (input * 1000.0) as u16,
+                                LocalPosition(Vector3::new(keyframe[0], keyframe[1], keyframe[2])),
+                                LocalPosition(Vector3::new(
+                                    input_tangent[0],
+                                    input_tangent[1],
+                                    input_tangent[2],
+                                )),
+                                LocalPosition(Vector3::new(
+                                    output_tangent[0],
+                                    output_tangent[1],
+                                    output_tangent[2],
+                                )),
+                            );
+                        }
+                    } else {
+                        for (input, t) in inputs.zip(t) {
+                            curve.curve_frame_values_frame(
+                                (input * 1000.0) as u16,
+                                LocalPosition(Vector3::new(t[0], t[1], t[2])),
+                            );
+                        }
+                    };
+
+                    self.gltf_creat_anim_curve(&key_curve, FrameCurveType::Position(curve))
+                }
+                ReadOutputs::Rotations(r) => {
+                    let mut curve = create_vurve(&interpolation);
+                    let mut rotations = r.into_f32();
+
+                    if interpolation == Interpolation::CubicSpline {
+                        for input in inputs {
+                            let input_tangent = rotations.next().unwrap();
+                            let input_tangent =
+                                Quaternion::from_quaternion(nalgebra::Quaternion::new(
+                                    input_tangent[0],
+                                    input_tangent[1],
+                                    input_tangent[2],
+                                    input_tangent[3],
+                                ))
+                                .euler_angles();
+
+                            let keyframe = rotations.next().unwrap();
+                            let keyframe = Quaternion::from_quaternion(nalgebra::Quaternion::new(
+                                keyframe[0],
+                                keyframe[1],
+                                keyframe[2],
+                                keyframe[3],
+                            ))
+                            .euler_angles();
+
+                            let output_tanget = rotations.next().unwrap();
+                            let output_target =
+                                Quaternion::from_quaternion(nalgebra::Quaternion::new(
+                                    output_tanget[0],
+                                    output_tanget[1],
+                                    output_tanget[2],
+                                    output_tanget[3],
+                                ))
+                                .euler_angles();
+
+                            curve.curve_cubic_splice_frame(
+                                (input * 1000.0) as u16,
+                                LocalEulerAngles(Vector3::new(
+                                    input_tangent.0,
+                                    input_tangent.1,
+                                    input_tangent.2,
+                                )),
+                                LocalEulerAngles(Vector3::new(keyframe.0, keyframe.1, keyframe.2)),
+                                LocalEulerAngles(Vector3::new(
+                                    output_target.0,
+                                    output_target.1,
+                                    output_target.2,
+                                )),
+                            );
+                        }
+                    } else {
+                        for (input, rotation) in inputs.zip(rotations) {
+                            let euler_angles =
+                                Quaternion::from_quaternion(nalgebra::Quaternion::new(
+                                    rotation[0],
+                                    rotation[1],
+                                    rotation[2],
+                                    rotation[3],
+                                ))
+                                .euler_angles();
+
+                            curve.curve_frame_values_frame(
+                                (input * 1000.0) as u16,
+                                LocalEulerAngles(Vector3::new(
+                                    euler_angles.0,
+                                    euler_angles.1,
+                                    euler_angles.2,
+                                )),
+                            );
+                        }
+                    };
+
+                    self.gltf_creat_anim_curve(&key_curve, FrameCurveType::Rotation(curve))
+                }
+                ReadOutputs::Scales(mut s) => {
+                    let mut curve = create_vurve(&interpolation);
+
+                    if interpolation == Interpolation::CubicSpline {
+                        for input in inputs {
+                            let input_tangent = s.next().unwrap();
+                            let keyframe = s.next().unwrap();
+                            let output_tangent = s.next().unwrap();
+
+                            curve.curve_cubic_splice_frame(
+                                (input * 1000.0) as u16,
+                                LocalScaling(Vector3::new(keyframe[0], keyframe[1], keyframe[2])),
+                                LocalScaling(Vector3::new(
+                                    input_tangent[0],
+                                    input_tangent[1],
+                                    input_tangent[2],
+                                )),
+                                LocalScaling(Vector3::new(
+                                    output_tangent[0],
+                                    output_tangent[1],
+                                    output_tangent[2],
+                                )),
+                            );
+                        }
+                    } else {
+                        for (input, scale) in inputs.zip(s) {
+                            curve.curve_frame_values_frame(
+                                (input * 1000.0) as u16,
+                                LocalScaling(Vector3::new(scale[0], scale[1], scale[2])),
+                            );
+                        }
+                    };
+
+                    self.gltf_creat_anim_curve(&key_curve, FrameCurveType::Scaling(curve))
+                }
+                ReadOutputs::MorphTargetWeights(_) => panic!("MorphTargetWeights is not supported"),
+            }
+        }
+    }
+}
+
+fn create_vurve<T: FrameDataValue>(interpolation: &Interpolation) -> FrameCurve<T> {
+    if interpolation == &Interpolation::CubicSpline {
+        return FrameCurve::curve_cubic_spline(1000);
+    } else {
+        let mut curve = FrameCurve::curve_frame_values(1000);
+        if interpolation == &Interpolation::Step {
+            curve.call = interplate_frame_values_step;
+        }
+        return curve;
     }
 }

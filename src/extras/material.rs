@@ -4,7 +4,7 @@ use std::path::Path;
 use bevy::prelude::Entity;
 use pi_atom::Atom;
 use pi_engine_shell::prelude::*;
-use pi_gltf::{image, iter::Textures, json::Value, Material};
+use pi_gltf::{image, json::Value};
 use pi_node_materials::prelude::{
     BlockCutoff, BlockEmissiveTexture, BlockEmissiveTextureUVOffsetSpeed, BlockMainTexture,
     BlockMainTextureUVOffsetSpeed, BlockMaskTexture, BlockMaskTextureUVOffsetSpeed, BlockOpacity,
@@ -15,10 +15,9 @@ use pi_scene_context::prelude::*;
 
 use unlit_material::{
     effects::{
-        distortion_uv::DistortionUVShader, emissive_fresnel::EmissiveFresnelShader,
+        distortion_uv::DistortionUVShader,
         main_opacity::MainOpacityShader, main_opacity_fresnel::MainOpacityFresnelShader,
     },
-    shader::UnlitShader,
 };
 
 const MAIN_OPACITY: &'static str = "main_opacity";
@@ -91,7 +90,7 @@ impl GLTFAPI<'_, '_> {
             self.mask_texture(root_path, idmat, mask_texture, textures)
         }
 
-        if let Some(diffuse_color) = distortion_uv.get("diffuseColor") {
+        if let Some(_diffuse_color) = distortion_uv.get("diffuseColor") {
             self.commands.matcmds.vec4.push(OpsUniformVec4::ops(
                 idmat,
                 Atom::from(BlockMainTexture::KEY_COLOR),
@@ -203,8 +202,8 @@ impl GLTFAPI<'_, '_> {
             .depth_write
             .push(OpsDepthWrite::ops(entity, depth_write));
 
-        let mut alpha_mode = 0;
-        if let Some(t_alpha_mode) = distortion_uv.get("alphaMode") {
+        let mut _alpha_mode = 0;
+        if let Some(_t_alpha_mode) = distortion_uv.get("alphaMode") {
             println!("=========== distortion_uv alphaMode ===========");
             let mut blend = ModelBlend::default();
             blend.combine();
@@ -257,7 +256,7 @@ impl GLTFAPI<'_, '_> {
             self.opacity_texture(root_path, idmat, info, opacity_texture, textures)
         }
 
-        if let Some(diffuse_color) = info.get("diffuseColor") {
+        if let Some(_diffuse_color) = info.get("diffuseColor") {
             self.commands.matcmds.vec4.push(OpsUniformVec4::ops(
                 idmat,
                 Atom::from(BlockMainTexture::KEY_COLOR),
@@ -324,8 +323,8 @@ impl GLTFAPI<'_, '_> {
             .depth_write
             .push(OpsDepthWrite::ops(entity, depth_write));
 
-        let mut alpha_mode = 0;
-        if let Some(t_alpha_mode) = info.get("alphaMode") {
+        let mut _alpha_mode = 0;
+        if let Some(_t_alpha_mode) = info.get("alphaMode") {
             println!("=========== main_opacity alphaMode ===========");
             let mut blend = ModelBlend::default();
             blend.combine();
@@ -378,7 +377,7 @@ impl GLTFAPI<'_, '_> {
             self.opacity_texture(root_path, idmat, info, opacity_texture, textures)
         }
 
-        if let Some(diffuse_color) = info.get("diffuseColor") {
+        if let Some(_diffuse_color) = info.get("diffuseColor") {
             self.commands.matcmds.vec4.push(OpsUniformVec4::ops(
                 idmat,
                 Atom::from("diffuseColor"),
@@ -476,8 +475,8 @@ impl GLTFAPI<'_, '_> {
             .depth_write
             .push(OpsDepthWrite::ops(entity, depth_write));
 
-        let mut alpha_mode = 0;
-        if let Some(t_alpha_mode) = info.get("alphaMode") {
+        let mut _alpha_mode = 0;
+        if let Some(_t_alpha_mode) = info.get("alphaMode") {
             println!("=========== main_opacity_opacity_fresnel alphaMode ===========");
             let mut blend = ModelBlend::default();
             blend.combine();
